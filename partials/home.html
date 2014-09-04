@@ -21,9 +21,4 @@ $navBarDelegate
 
 <p><a class="btn btn-block btn-primary btn-outlined" ng-click="goToView(1)">Go To View 1</a></p>
 
-<h4>History Stack</h4>
-<p ng-if="history().length==0"><em>no history</em></p>
-<ul>
-  <li ng-repeat="state in history()">{{state.title}}</li>
-</ul>
-
+<ng-include src="'partials/history.html'"></ng-include>

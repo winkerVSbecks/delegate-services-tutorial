@@ -2,10 +2,9 @@
 
 <p>Alternatively we can get data from the directive, such as the navigation history.</p>
 
+<h4>How Does It Work?</h4>
+<p><code>navbar-delegate-service</code> lists all the methods available through the public API. These methods are actually defined in the <code>navbar-controller</code>. The <code>delegateService</code> is a function which maps these methods on to the service, when a handle is registered.</p>
+
 <p><a class="btn btn-block btn-primary btn-outlined" ng-click="goToView(2)">Go To View 2</a></p>
 
-<h4>History Stack</h4>
-<p ng-if="history().length==0"><em>no history</em></p>
-<ul>
-	<li ng-repeat="state in history()">{{state.title}}</li>
-</ul>
+<ng-include src="'partials/history.html'"></ng-include>

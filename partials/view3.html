@@ -1,0 +1,9 @@
+<h4>When to use the delegate pattern?</h4>
+
+<p>1. When using non-AngularJS based libraries in an AngularJS app, eg: <a href="https://github.com/jtrussell/angular-snap.js/blob/master/src/scripts/services/snap-remote.js">Angular-Snap.js</a>. In this case, you would pass an instance of the object created by the library instead of the controller.</p>
+
+<p>2. When building components that need to be controlled by other components, eg: <a href="http://ionicframework.com/docs/api/directive/ionNavView/">Ion Nav View</a>. In this case, you would pass an instance of the controller. We have to use a controller instead of a service because you can actually have multiple instances of a controller.</p>
+
+<p>3. When you want to write code that is not dependant on AngularJS and can be re-used elsewhere eg: <a href="http://ionicframework.com/docs/api/directive/ionScroll/">Ion Scroll</a>. In this case you can build your "Class" in <em>whatever</em> and instantiate it within the delegate-service.</p>
+
+<ng-include src="'partials/history.html'"></ng-include>

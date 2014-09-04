@@ -21,6 +21,11 @@ angular.module('delegateExampleApp', [
       url: '/view2',
       templateUrl: 'partials/view2.html',
       controller: 'ViewCtrl'
+    })
+    .state('view3', {
+      url: '/view3',
+      templateUrl: 'partials/view3.html',
+      controller: 'ViewCtrl'
     });
 
     $urlRouterProvider.otherwise('/');

@@ -1,0 +1,7 @@
+<div class="card">
+  <ul class="table-view">
+    <li class="table-view-cell table-view-divider">Navigation History Stack</li>
+    <li class="table-view-cell" ng-if="history().length==0"><em>no history yet</em></li>
+    <li ng-repeat="state in history()" class="table-view-cell">{{state.title}}</li>
+  </ul>
+</div>

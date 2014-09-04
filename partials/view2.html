@@ -1,18 +1,15 @@
 <p>You can set the direction of the animation based on whether the user if going forwards/backwards in history.</p>
 
-<h4>History Stack</h4>
-<p ng-if="history().length==0"><em>no history</em></p>
-<ul>
-  <li ng-repeat="state in history()">{{state.title}}</li>
-</ul>
-
 <p><a class="btn btn-block btn-primary btn-outlined" ng-click="loading()">Then Load things</a></p>
 
 <p><a class="btn btn-block btn-primary btn-outlined" ng-click="nestedNavbar()">or Change the Title of the Nested Navbar</a></p>
 
 <div class="nested-content content content-padded slide-left-right">
-  <nav-bar delegate-handle="my-awesome-navbar-two" title="My Awesome App Two"></nav-bar>
+  <nav-bar delegate-handle="my-awesome-navbar-two" title="My Awesome Nested View"></nav-bar>
   <div class="content content-padded">
-    <p>This is a nested view with it's own navbar and history.</p>
+    <p>You can build nested view with their own navbar and histories.</p>
+    <p><a class="btn btn-block btn-primary btn-outlined" ng-click="goToView(3)">When to use the delegate pattern?</a></p>
   </div>
 </div>
+
+<ng-include src="'partials/history.html'"></ng-include>
