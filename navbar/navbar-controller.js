@@ -27,10 +27,10 @@ angular.module('delegateExampleApp')
       if($scope.history.length > 0) {
         $state.go($scope.history[$scope.history.length-1].state);
         this.changeTitle($scope.history[$scope.history.length-1].title, 'back');
-        $scope.history.pop();
-        if($scope.history === 'home') {
+        if($scope.history[$scope.history.length-1].state === 'home') {
           this.showBackButton(false);
         }
+        $scope.history.pop();
       }
       return false;
     };

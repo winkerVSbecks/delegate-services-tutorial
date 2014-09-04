@@ -1,14 +1,29 @@
-<p>Lorem ipsum dolor sit amet, pri agam nemore elaboraret ne. Ad harum dolores eam, at duo esse accusata gloriatur, an duo consul inermis. Altera utroque electram eu per. Qui tation audire regione ei. Legimus meliore ea cum, exerci fuisset te vel.</p>
+<p>A delegate service allows you to access and control a directive. It also allows you to have multiple instances of a component in the same view.</p>
 
-<p>Vel no pertinax mediocritatem, corrumpit repudiare te ius, in primis abhorreant ius. Brute rationibus theophrastus an his. Aperiam democritum mei ei, duo ne amet causae. Sea tritani forensibus ei, vis ut consul omnesque abhorreant. Tollit consulatu ex sed. Eu est movet menandri, ne vis modus cetero persecuti.</p>
+<p>This is a demo of how the <a href="http://ionicframework.com/">Ionic Framework</a> uses delegate services for their directives.</p>
 
-<p>Cu novum suscipiantur nec. Repudiandae interpretaris sit ne, no diam tincidunt constituam sit. Ad malis oportere iracundia pro. Clita aeterno efficiantur ne qui, ut mazim perfecto duo, pertinax ullamcorper nec in.</p>
+<p>The <code>nav-bar</code> directive can be controlled using the <code>$navBarDelegate</code> service.</p>
+
+<pre ng-bind-html-unsafe>
+&lt;nav-bar
+  delegate-handle="my-navbar"
+  title="My Awesome App"&gt;
+&lt;/nav-bar&gt;
+</pre>
+
+<p>The delegate service allows us to grab individual instances using the <code>delegate-handle</code>.</p>
+
+<pre ng-bind-html-unsafe>
+$navBarDelegate
+  .$getByHandle('my-navbar')
+    .doSomething();
+</pre>
 
 <p><a class="btn btn-block btn-primary btn-outlined" ng-click="goToView(1)">Go To View 1</a></p>
 
 <h4>History Stack</h4>
 <p ng-if="history().length==0"><em>no history</em></p>
 <ul>
-	<li ng-repeat="state in history()">{{state.title}}</li>
+  <li ng-repeat="state in history()">{{state.title}}</li>
 </ul>
 

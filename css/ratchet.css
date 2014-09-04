@@ -126,6 +126,13 @@ pre {
   overflow: auto;
 }
 
+code {
+  color: #C7254E;
+  background-color: #F9F2F4;
+  padding: 2px;
+  border-radius: 2px;
+}
+
 code,
 kbd,
 pre,
@@ -447,7 +454,8 @@ p {
   display: block;
   width: 100%;
   padding: 15px 0;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+  margin-top: 40px;
   font-size: 18px;
 }
 

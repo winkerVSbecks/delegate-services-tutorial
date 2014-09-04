@@ -1,6 +1,13 @@
 h1 {
   text-transform: uppercase; }
 
+.nested-content {
+  position: absolute;
+  top: 400px;
+  height: 300px;
+  border: 1px solid black;
+}
+
 .invisible {
   visibility: hidden; }
 

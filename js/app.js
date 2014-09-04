@@ -51,4 +51,9 @@ angular.module('delegateExampleApp', [
         $navBarDelegate.$getByHandle('my-awesome-navbar')
           .changeTitle('Loading stuff... ', true);
       };
+      // nested navbar
+      $scope.nestedNavbar = function () {
+        $navBarDelegate.$getByHandle('my-awesome-navbar-two')
+          .changeTitle('Boom!', true);
+      };
   }]);
