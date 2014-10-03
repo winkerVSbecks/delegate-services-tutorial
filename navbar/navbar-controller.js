@@ -8,8 +8,9 @@ angular.module('delegateExampleApp')
     '$navBarDelegate',
     '$state',
   function($scope, $element, $attrs, $animate, $compile, $navBarDelegate, $state) {
+    // Register the instance!
     var deregisterInstance = $navBarDelegate._registerInstance(this, $attrs.delegateHandle);
-
+    // De-Register on destory!
     $scope.$on('$destroy', deregisterInstance);
 
     var self = this;
